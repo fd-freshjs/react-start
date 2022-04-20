@@ -1,7 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+// single
+export function App() {
+
   return (
     <div className="App">
       <header className="App-header">
@@ -22,4 +24,12 @@ function App() {
   );
 }
 
-export default App;
+// module.exports.App = App;
+
+
+
+// es6 modules
+// export default App;
+
+// commonjs modules
+// module.exports = App;
