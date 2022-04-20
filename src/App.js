@@ -1,35 +1,27 @@
-import logo from './logo.svg';
+import React from 'react';
+import Header from './Header';
 import './App.css';
 
-// single
-export function App() {
+class App extends React.Component {
 
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  render() {
+    return (
+      <div className="App">
+        {/*  */}
+        <Header />
+        {/*  */}
+      </div>
+    );
+  }
 }
 
-// module.exports.App = App;
+export default App;
 
 
+/* 
 
-// es6 modules
-// export default App;
+  1) На основе примера файла App.js создайте новый файл Header.js
+  2) перенесите тэг header из App в новый файл
+  3) после чего подключите новый компонент внутри App
 
-// commonjs modules
-// module.exports = App;
+*/
