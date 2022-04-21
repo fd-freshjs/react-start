@@ -1,28 +1,23 @@
-import React, { createElement } from 'react';
-// import { value } from './Main'; // named
-import * as obj from './Main'; // alias
-
-import Main, { value } from './Main'; // mixed
-
-console.log(obj.value);
-console.log(value);
+import React from "react";
+import About from "./pages/About";
+import Home from "./pages/Home";
 
 function App(props) {
-  const text = [
-    createElement('h1', null, `Привет, ${"мир!"}`), // js
-    <h1>Привет, мир!</h1> // jsx
-  ];
-  
-  const name = "main qwe";
+  // передать logoText в Header как текст вместо LOGO
+  const logoText = 'MyReact';
 
   return (
-    <p id="par" title="main paragraph" className={name} tabIndex="2">
-      <span></span>
-      <span></span>
-      {text}
-    </p>
+    <div>
+      {/* вынести хедер в новый компонент components */}
+      <header className="logo">
+        <h1>LOGO</h1>
+      </header>
+      <main>
+        <Home />
+        <About />
+      </main>
+    </div>
   );
 }
 
 export default App;
-// module.exports = App;
