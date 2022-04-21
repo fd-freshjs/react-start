@@ -1,22 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './App'; // default, single
 
 import './index.css';
 
-const text = [
-  React.createElement('h1', null, `Привет, ${"мир!"}`), // js
-  <h1>Привет, мир!</h1> // jsx
-];
-
-const name = "main qwe";
-
 ReactDOM.render(
   <React.StrictMode>
-    <p id="par" title="main paragraph" className={name} tabIndex="2">
-      <span></span>
-      <span></span>
-      {text}
-    </p>
+    <App></App>
   </React.StrictMode>,
   document.getElementById('root')
 );
