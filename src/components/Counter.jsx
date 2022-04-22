@@ -8,20 +8,23 @@ class Counter extends React.Component {
     this.state = { counter: 0, test: 123 };
   }
 
+  // используем стрелки для слушателей событий
+  buttonClick = () => {
+    // изменение состояния приводит к перерисовке
+    // state всегда обьект - поэтому создаем новый обьект
+    this.setState((state) => {
+      return {
+        ...state,
+        counter: state.counter + 1,
+      };
+    });
+  }
+
   render() {
     return (
       <div>
         <div>{this.state.counter}</div>
-        <button onClick={
-          () => {
-            // изменение состояния приводит к перерисовке
-            // state всегда обьект - поэтому создаем новый обьект
-            this.setState( {
-              ...this.state,
-              counter: this.state.counter + 1,
-            } );
-          }
-        }>+1</button>
+        <button onClick={this.buttonClick}>+1</button>
       </div>
     );
   }
