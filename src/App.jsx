@@ -1,17 +1,14 @@
 import React from "react";
 import About from "./pages/About";
 import Home from "./pages/Home";
+import Header from './components/Header';
 
-function App(props) {
-  // передать logoText в Header как текст вместо LOGO
-  const logoText = 'MyReact';
+function App() {
+  const logo = 'MyReact';
 
   return (
     <div>
-      {/* вынести хедер в новый компонент components */}
-      <header className="logo">
-        <h1>LOGO</h1>
-      </header>
+      <Header logoText={logo} />
       <main>
         <Home />
         <About />
