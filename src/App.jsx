@@ -10,7 +10,7 @@ class App extends React.Component {
 
     this.state = {
       brand: 'MyReact',
-      user: { name: 'Oleg', image: 'https://www.diethelmtravel.com/wp-content/uploads/2016/04/bill-gates-wealthiest-person.jpg' }
+      user: { name: 'Oleg', image: 'https://www.diethelmtravel.com/wp-content/uploads/2016/04/bill-gates-wealthiest-person.jpg' },
     };
   }
 
@@ -21,7 +21,7 @@ class App extends React.Component {
         <main>
           <Counter />
           <Home />
-          <About />
+          <About component={<div></div>} />
         </main>
       </div>
     );
