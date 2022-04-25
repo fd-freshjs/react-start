@@ -16,7 +16,7 @@ class Counter extends React.Component {
       return {
         ...state, // записываем старые знач
         // устанавливаем новые знач - перезаписывая с тем же названием свойства
-        counter: state.counter + 1, 
+        counter: state.counter + 1,
       };
     });
   }
@@ -27,7 +27,7 @@ class Counter extends React.Component {
     }) );
   }
   reset = () => {
-    this.setState( s => ({ ...s, counter: 0 }) );
+    this.setState({ ...this.state, counter: 0 });
   }
 
   render() {
