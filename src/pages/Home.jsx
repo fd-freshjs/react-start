@@ -3,7 +3,7 @@ import Slider from "../components/Slider";
 
 function Home(props) {
   return <div className="homepage">
-    <Counter />
+    {/* <Counter /> */}
     <Slider />
   </div>;
 }
