@@ -11,14 +11,14 @@ const images = ['image1', 'image2'];
 class Slider extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = { slide: 0 };
   }
 
   componentDidMount() {}
 
   componentWillUnmount() {}
 
-  next = () => {}
+  nextSlide = () => {}
   startSlider = () => {}
 
   render() {
@@ -27,7 +27,7 @@ class Slider extends React.Component {
         <div>
           <button>-</button>
 
-          <img src={} alt="" />
+          <img src={images[0]} alt="" />
 
           <button onClick={this.next}>+</button>
         </div>

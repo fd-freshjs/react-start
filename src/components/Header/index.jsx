@@ -7,14 +7,19 @@ import './Header.css';
 class Header extends React.Component {
   render() {
     return (
-      <header className="logo">
-          <h1>{this.props.logoText}</h1>
+      <header className="header">
+          <h1 className="logo">{this.props.logoText}</h1>
 
           <Nav />
 
-          <NavLink href="/profile" simpleLink={true}>
-            <Avatar src={this.props.user.image} alt={this.props.user.name} />
-          </NavLink>
+          <div className="user-info">
+            <span>
+              {this.props.user.name}
+            </span>
+            <NavLink href="/profile" simpleLink={true}>
+              <Avatar src={this.props.user.image} alt={this.props.user.name} />
+            </NavLink>
+          </div>
       </header>
     );
   }

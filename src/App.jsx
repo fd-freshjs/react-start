@@ -1,8 +1,7 @@
 import React from "react";
-import About from "./pages/About";
 import Home from "./pages/Home";
 import Header from './components/Header';
-import Counter from "./components/Counter";
+import Footer from './components/Footer';
 
 class App extends React.Component {
   constructor(props) {
@@ -18,11 +17,13 @@ class App extends React.Component {
     return (
       <div>
         <Header logoText={this.state.brand} user={this.state.user} />
-        <main>
-          <Counter />
+
+        <main className="main">
+          {/* В будущем будем менять содержимое в зависимости от адреса страницы */}
           <Home />
-          <About component={<div></div>} />
         </main>
+
+        <Footer />
       </div>
     );
   }

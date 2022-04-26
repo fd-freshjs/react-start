@@ -1,11 +1,12 @@
 import React from 'react';
-import NavLink from './NavLink';
+import NavLink from '../NavLink';
+import './Nav.css';
 
 class Nav extends React.Component {
   render() {
     return (
-      <nav>
-        <ul>
+      <nav className="nav">
+        <ul className="nav-list">
           <NavLink href="/">
             {/* children */}
             Home

@@ -1,0 +1,10 @@
+
+body {
+  --backg-block-color: rgb(225, 222, 222);
+  --font-color: black;
+}
+
+body#dark {
+  --backg-block-color: black;
+  --font-color: rgb(244, 243, 243);
+}
